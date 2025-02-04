@@ -5,10 +5,10 @@ import Home from './pages/Home';
 
 function App() {
   return (
-    <>
-    //<Home />
+    <div className="bg-black">
+    <Home />
     <Footer />
-    </>
+    </div>
   )
 }
 

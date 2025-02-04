@@ -1,4 +1,4 @@
-import mail from "../assets/pulsora.png";
+import mail from "../assets/linkedin.png";
 // import project2 from "../images/project2.jpg";
 // import project3 from "../images/project3.jpg";
 
@@ -22,7 +22,7 @@ const projects = [
 
 export default function Home() {
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen bg-black text-white px-6">
+    <section className="flex flex-col items-center justify-center min-h-screen text-white px-6">
       <h2 className="text-3xl font-bold mb-8">PROJETS SCOLAIRES</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl">
         {projects.map((project, index) => (
