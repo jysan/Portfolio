@@ -4,12 +4,12 @@ import { FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white py-12 flex flex-col items-center">
+    <footer id="footer-contact" className="bg-black text-white py-12 flex flex-col items-center">
       {/* Profile Picture Placeholder */}
       <div className="w-16 h-16 bg-gray-700 rounded-md mb-4"></div>
       
       {/* Contact Text */}
-      <p className="mb-4 text-lg">Me contactez</p>
+      <p className="mb-4 text-lg">Me contacter</p>
       
       {/* Social Icons */}
       <div className="flex space-x-6">
