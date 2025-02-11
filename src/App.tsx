@@ -5,7 +5,7 @@ import Home from './pages/Home';
 
 function App() {
   return (
-    <div className="bg-black">
+    <div className="bg-gray-700">
     <Header />
     <Home />
     <Footer />
