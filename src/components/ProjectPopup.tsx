@@ -12,7 +12,7 @@ interface ProjectPopupProps {
 
 export default function ProjectPopup({ project, onClose }: ProjectPopupProps) {
   return (
-    <div className="fixed inset-0  bg-opacity-50 backdrop-blur-md flex items-center justify-center z-50">
+    <div className="fixed inset-0 bg-opacity-50 backdrop-blur-md flex items-center justify-center z-50">
       <motion.div
         className="bg-gray-900 p-6 rounded-xl shadow-lg w-11/12 md:w-1/2 relative"
         initial={{ opacity: 0, scale: 0.8 }}
