@@ -1,4 +1,5 @@
 import logo from "../assets/logo-portfolio.png";
+import CV from "../assets/CV_Stage_SanjyBOOT.pdf"
 
 const logosite = [
   { image: logo, alt: "Logo Portfolio" },
@@ -25,7 +26,7 @@ function Header() {
         <a href="#footer-contact" className="hover:text-blue-400">Me contacter</a>
       </nav>
       <a
-        href="/path-to-cv.pdf"
+        href={CV}
         download
         className="bg-blue-600 text-white px-4 py-2 rounded-xl shadow hover:bg-blue-500"
       >

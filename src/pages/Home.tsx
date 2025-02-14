@@ -1,5 +1,5 @@
-import { FaArrowUp, FaReact, FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaGitAlt, FaSymfony, FaWordpress } from "react-icons/fa";
-import { SiTypescript, SiPhp, SiDocker, SiTailwindcss } from "react-icons/si";
+import { FaArrowUp, FaReact, FaHtml5, FaCss3Alt, FaSymfony, FaWordpress, FaGitAlt } from "react-icons/fa";
+import { SiTypescript, SiPhp, SiDocker, SiTailwindcss, SiAdobephotoshop, SiAdobeindesign, SiBlender } from "react-icons/si";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import pulsora from "../assets/pulsora.png";
@@ -22,21 +22,21 @@ const projects: Project[] = [
     title: "Pulsora",
     date: "Octobre 2024 - Mars 2025",
     image: pulsora,
-    description: "Une plateforme innovante pour la gestion de contenus interactifs.",
-    tools: ["React", "Node.js", "MongoDB"],
+    description: "Une application web et mobile qui sert à suivre les joueurs d'un club de football .",
+    tools: ["React","Typescript", "Tailwindcss", "Docker","Figma","Git"],
   },
   {
     title: "AC2FL",
     date: "Décembre 2023 - Janvier 2024",
     image: AC2FL,
-    description: "Un site web conçu pour une association culturelle.",
-    tools: ["WordPress", "PHP", "Tailwind CSS"],
+    description: "Une refont du site vitrine AC2FL.",
+    tools: ["PHP", "Tailwind CSS","Figma","Git"],
   },
   {
     title: "Webdocumentaire",
     date: "Septembre 2023 - Novembre 2023",
     image: webdoc,
-    description: "Un projet interactif explorant un sujet spécifique avec des contenus multimédias.",
+    description: "Ce projet à pour sujet un reportage sur un traiteur italien .",
     tools: ["HTML", "CSS", "JavaScript"],
   },
 ];
@@ -45,15 +45,15 @@ const skills = [
   { icon: FaReact, color: "#61DBFB", title: "React" },
   { icon: FaHtml5, color: "#E34C26", title: "HTML5" },
   { icon: FaCss3Alt, color: "#264DE4", title: "CSS3" },
-  { icon: FaJs, color: "#F7DF1E", title: "JavaScript" },
   { icon: SiTypescript, color: "#3178C6", title: "TypeScript" },
   { icon: FaWordpress, color: "#21759B", title: "WordPress" },
   { icon: FaGitAlt, color: "#F34F29", title: "Git" },
-  { icon: FaNodeJs, color: "#3C873A", title: "Node.js" },
-  { icon: SiPhp, color: "#777BB4", title: "PHP" },
   { icon: SiDocker, color: "#2496ED", title: "Docker" },
-  { icon: SiTailwindcss, color: "#06B6D4", title: "Tailwind CSS" },
   { icon: FaSymfony, color: "#000000", title: "Symfony" },
+  { icon: SiTailwindcss, color: "#06B6D4", title: "Tailwind CSS" },
+  { icon: SiAdobeindesign, color: "#000000", title: "Indesign" },
+  { icon: SiAdobephotoshop, color: "#264DE4", title: "Photoshop" },
+  { icon: SiBlender, color: "#000000", title: "Blender" },
 ];
 
 export default function Home() {
