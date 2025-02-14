@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import pulsora from "../assets/pulsora.png";
 import AC2FL from "../assets/AC2FL.webp";
+import webdoc from "../assets/webdoc.png";
 import photoProfile from "../assets/pdp.jpg";
 import ProjectPopup from "../components/ProjectPopup";
 
@@ -34,7 +35,7 @@ const projects: Project[] = [
   {
     title: "Webdocumentaire",
     date: "Septembre 2023 - Novembre 2023",
-    image: pulsora,
+    image: webdoc,
     description: "Un projet interactif explorant un sujet spécifique avec des contenus multimédias.",
     tools: ["HTML", "CSS", "JavaScript"],
   },
