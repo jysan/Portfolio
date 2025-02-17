@@ -1,11 +1,11 @@
-import { FaArrowUp, FaReact, FaHtml5, FaCss3Alt, FaSymfony, FaWordpress, FaGitAlt } from "react-icons/fa";
-import { SiTypescript, SiPhp, SiDocker, SiTailwindcss, SiAdobephotoshop, SiAdobeindesign, SiBlender } from "react-icons/si";
+import { FaArrowUp, FaReact, FaSymfony, FaWordpress, FaGitAlt } from "react-icons/fa";
+import { SiTypescript,SiDocker, SiTailwindcss, SiAdobephotoshop, SiAdobeindesign, SiBlender } from "react-icons/si";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import pulsora from "../assets/pulsora.png";
 import AC2FL from "../assets/AC2FL.webp";
 import webdoc from "../assets/webdoc.png";
-import photoProfile from "../assets/pdp.jpg";
+import photoProfile from "../assets/pics.png";
 import ProjectPopup from "../components/ProjectPopup";
 
 // Définition du type Project
@@ -15,6 +15,7 @@ type Project = {
   image: string;
   description: string;
   tools: string[];
+  lien: string,
 };
 
 const projects: Project[] = [
@@ -24,6 +25,7 @@ const projects: Project[] = [
     image: pulsora,
     description: "Une application web et mobile qui sert à suivre les joueurs d'un club de football .",
     tools: ["React","Typescript", "Tailwindcss", "Docker","Figma","Git"],
+    lien: "https://github.com/jpkamdem/pulsora-final.git",
   },
   {
     title: "AC2FL",
@@ -31,29 +33,30 @@ const projects: Project[] = [
     image: AC2FL,
     description: "Une refont du site vitrine AC2FL.",
     tools: ["PHP", "Tailwind CSS","Figma","Git"],
+    lien: "https://github.com/rboucheron/AC2FL.git",
+    
   },
   {
     title: "Webdocumentaire",
     date: "Septembre 2023 - Novembre 2023",
     image: webdoc,
     description: "Ce projet à pour sujet un reportage sur un traiteur italien .",
-    tools: ["HTML", "CSS", "JavaScript"],
+    tools: ["HTML", "CSS", "JavaScript", "Figma","Git"],
+    lien: "https://github.com/GuedesAlexandre/Webdoc.git",
   },
 ];
 
 const skills = [
   { icon: FaReact, color: "#61DBFB", title: "React" },
-  { icon: FaHtml5, color: "#E34C26", title: "HTML5" },
-  { icon: FaCss3Alt, color: "#264DE4", title: "CSS3" },
   { icon: SiTypescript, color: "#3178C6", title: "TypeScript" },
   { icon: FaWordpress, color: "#21759B", title: "WordPress" },
   { icon: FaGitAlt, color: "#F34F29", title: "Git" },
   { icon: SiDocker, color: "#2496ED", title: "Docker" },
   { icon: FaSymfony, color: "#000000", title: "Symfony" },
   { icon: SiTailwindcss, color: "#06B6D4", title: "Tailwind CSS" },
-  { icon: SiAdobeindesign, color: "#000000", title: "Indesign" },
+  { icon: SiAdobeindesign, color: "#FF0099", title: "Indesign" },
   { icon: SiAdobephotoshop, color: "#264DE4", title: "Photoshop" },
-  { icon: SiBlender, color: "#000000", title: "Blender" },
+  { icon: SiBlender, color: "#F34F29", title: "Blender" },
 ];
 
 export default function Home() {

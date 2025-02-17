@@ -1,14 +1,18 @@
 import { motion } from "framer-motion";
-import { FaTimes } from "react-icons/fa";
+import { FaTimes, FaGitAlt } from "react-icons/fa";
+
+
 
 interface ProjectPopupProps {
   project: {
     title: string;
     description: string;
     tools: string[];
+    lien: string;
   };
   onClose: () => void;
 }
+
 
 export default function ProjectPopup({ project, onClose }: ProjectPopupProps) {
   return (
@@ -30,6 +34,18 @@ export default function ProjectPopup({ project, onClose }: ProjectPopupProps) {
             <li key={index}>{tool}</li>
           ))}
         </ul>
+        {project.lien && (
+          <a 
+            href={project.lien} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="flex items-center white hover:text-blue-400 mt-2"
+          >
+            <FaGitAlt size={24} className="mr-2" />
+            Voir le projet sur GitHub
+          </a>
+        )}
+
       </motion.div>
     </div>
   );
