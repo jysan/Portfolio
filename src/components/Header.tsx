@@ -23,6 +23,7 @@ function Header() {
         <a href="#about" className="hover:text-blue-400">Qui suis-je ?</a>
         <a href="#skills" className="hover:text-blue-400">Mes compétences</a>
         <a href="#projects" className="hover:text-blue-400">Mes projets</a>
+        <a href="#veille" className="hover:text-blue-400">Ma Veille</a>
         <a href="#footer-contact" className="hover:text-blue-400">Me contacter</a>
       </nav>
       <a

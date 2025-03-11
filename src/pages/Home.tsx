@@ -1,4 +1,4 @@
-import { FaArrowUp, FaReact, FaSymfony, FaWordpress, FaGitAlt } from "react-icons/fa";
+import { FaArrowUp, FaReact,FaWordpress, FaGitAlt } from "react-icons/fa";
 import { SiTypescript,SiDocker, SiTailwindcss, SiAdobephotoshop, SiAdobeindesign, SiBlender } from "react-icons/si";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
@@ -7,14 +7,18 @@ import AC2FL from "../assets/AC2FL.webp";
 import webdoc from "../assets/webdoc.png";
 import photoProfile from "../assets/pics.png";
 import ProjectPopup from "../components/ProjectPopup";
+import VeilleCarousel from "../components/VeilleCarousel";
+import lego from "../assets/lego.mp4"
+import lego2 from "../assets/lego2.mp4"
+import lego3 from "../assets/lego3.mp4"
 
-// Définition du type Project
+
 type Project = {
   title: string;
   date: string;
   image: string;
   description: string;
-  tools: string[];
+  tools: string[]
   lien: string,
 };
 
@@ -52,7 +56,6 @@ const skills = [
   { icon: FaWordpress, color: "#21759B", title: "WordPress" },
   { icon: FaGitAlt, color: "#F34F29", title: "Git" },
   { icon: SiDocker, color: "#2496ED", title: "Docker" },
-  { icon: FaSymfony, color: "#000000", title: "Symfony" },
   { icon: SiTailwindcss, color: "#06B6D4", title: "Tailwind CSS" },
   { icon: SiAdobeindesign, color: "#FF0099", title: "Indesign" },
   { icon: SiAdobephotoshop, color: "#264DE4", title: "Photoshop" },
@@ -80,10 +83,17 @@ export default function Home() {
       <section id="about" className="flex flex-col items-center justify-center min-h-[70vh] mb-8">
         <h2 className="text-3xl font-bold mb-6">Qui suis-je ?</h2>
         <div className="flex flex-col md:flex-row items-center justify-between max-w-6xl">
-          <img src={photoProfile} alt="Profile" className="w-64 h-64 rounded-2xl object-cover mb-6 md:mb-0 md:mr-8 scale-110" />
-          <p className="text-lg text-gray-300 max-w-2xl leading-7">
-            Je suis un étudiant en 3ème année de BUT Métiers du Multimédia et de l'Internet (MMI)...
-          </p>
+        <video
+        src={lego3} // Ton fichier vidéo importé
+        autoPlay
+        muted
+        playsInline
+        className="w-64 h-96 rounded-2xl object-cover mb-6 md:mb-0 md:mr-8 scale-110 shadow-lg"/>
+        <p className="text-lg text-gray-300 max-w-2xl leading-7">
+            
+        Je suis Sanjy BOOT, actuellement je suis en 3ème année du BUT Métiers du Multimédia et de l’Internet (MMI) spécialité développement web et dispositif intéractif, j’ai fait un bac sciences technologique en laboratoire.
+
+        </p>
         </div>
       </section>
 
@@ -135,6 +145,13 @@ export default function Home() {
             </motion.div>
           ))}
         </div>
+      </section>
+
+      <section id="veille" className="flex flex-col items-center justify-center min-h-[70vh]">
+        <h2 className="text-3xl font-bold mb-6">MA VEILLE</h2>
+        <p className="items-center mb-5">La veille est centrée sur la cybersécurité car suite au BUT MMI j'aimerais m'orienter vers ce domaine</p>
+        <VeilleCarousel />
+
       </section>
 
       {selectedProject && <ProjectPopup project={selectedProject} onClose={() => setSelectedProject(null)} />}
