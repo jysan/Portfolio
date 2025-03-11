@@ -5,12 +5,11 @@ import { useState, useEffect } from "react";
 import pulsora from "../assets/pulsora.png";
 import AC2FL from "../assets/AC2FL.webp";
 import webdoc from "../assets/webdoc.png";
-import photoProfile from "../assets/pics.png";
+//import photoProfile from "../assets/pics.png";
 import ProjectPopup from "../components/ProjectPopup";
 import VeilleCarousel from "../components/VeilleCarousel";
 import lego from "../assets/lego.mp4"
-import lego2 from "../assets/lego2.mp4"
-import lego3 from "../assets/lego3.mp4"
+
 
 
 type Project = {
@@ -84,7 +83,7 @@ export default function Home() {
         <h2 className="text-3xl font-bold mb-6">Qui suis-je ?</h2>
         <div className="flex flex-col md:flex-row items-center justify-between max-w-6xl">
         <video
-        src={lego3} // Ton fichier vidéo importé
+        src={lego} // Ton fichier vidéo importé
         autoPlay
         muted
         playsInline
