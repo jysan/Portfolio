@@ -1,14 +1,14 @@
 import { FaArrowUp, FaReact,FaWordpress, FaGitAlt } from "react-icons/fa";
-import { SiTypescript,SiDocker, SiTailwindcss, SiAdobephotoshop, SiAdobeindesign, SiBlender } from "react-icons/si";
+import { SiTypescript, SiTailwindcss, SiAdobephotoshop, SiAdobeindesign, SiBlender } from "react-icons/si";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import pulsora from "../assets/pulsora.png";
 import AC2FL from "../assets/AC2FL.webp";
 import webdoc from "../assets/webdoc.png";
-//import photoProfile from "../assets/pics.png";
 import ProjectPopup from "../components/ProjectPopup";
 import VeilleCarousel from "../components/VeilleCarousel";
-import lego from "../assets/lego.mp4"
+import AnimatedIntro from "../components/AnimatedIntro";
+import pdp from "../assets/pdp.png"
 
 
 
@@ -26,7 +26,7 @@ const projects: Project[] = [
     title: "Pulsora",
     date: "Octobre 2024 - Mars 2025",
     image: pulsora,
-    description: "Une application web et mobile qui sert à suivre les joueurs d'un club de football .",
+    description: "Une application web et mobile qui sert à suivre les joueurs d'un club de football. On a une partie admin qui permet de réaliser une gestion sur des articles, des joueurs, des équipes.",
     tools: ["React","Typescript", "Tailwindcss", "Docker","Figma","Git"],
     lien: "https://github.com/jpkamdem/pulsora-final.git",
   },
@@ -54,7 +54,6 @@ const skills = [
   { icon: SiTypescript, color: "#3178C6", title: "TypeScript" },
   { icon: FaWordpress, color: "#21759B", title: "WordPress" },
   { icon: FaGitAlt, color: "#F34F29", title: "Git" },
-  { icon: SiDocker, color: "#2496ED", title: "Docker" },
   { icon: SiTailwindcss, color: "#06B6D4", title: "Tailwind CSS" },
   { icon: SiAdobeindesign, color: "#FF0099", title: "Indesign" },
   { icon: SiAdobephotoshop, color: "#264DE4", title: "Photoshop" },
@@ -64,6 +63,7 @@ const skills = [
 export default function Home() {
   const [showButton, setShowButton] = useState(false);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [introComplete, setIntroComplete] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -78,20 +78,20 @@ export default function Home() {
   };
 
   return (
+  <>  
+    {!introComplete && <AnimatedIntro onComplete={() => setIntroComplete(true)} />}
+      {introComplete && (
     <main className="text-white px-6">
       <section id="about" className="flex flex-col items-center justify-center min-h-[70vh] mb-8">
         <h2 className="text-3xl font-bold mb-6">Qui suis-je ?</h2>
         <div className="flex flex-col md:flex-row items-center justify-between max-w-6xl">
-        <video
-        src={lego} // Ton fichier vidéo importé
-        autoPlay
-        muted
-        playsInline
-        className="w-64 h-96 rounded-2xl object-cover mb-6 md:mb-0 md:mr-8 scale-110 shadow-lg"/>
-        <p className="text-lg text-gray-300 max-w-2xl leading-7">
-            
-        Je suis Sanjy BOOT, actuellement je suis en 3ème année du BUT Métiers du Multimédia et de l’Internet (MMI) spécialité développement web et dispositif intéractif, j’ai fait un bac sciences technologique en laboratoire.
-
+        <div className="mb-4 md:mb-0 md:mr-6">
+      <img src={pdp} alt="Photo de profil" className="w-60 h-60 rounded-full object-cover" />
+    </div>
+        <p className="text-lg text-justify text-gray-300 max-w-2xl leading-7">
+        Je m'appelle Sanjy BOOT, mon parours à commencé avec un bac sciences technologique en laboratoire avec mention, souhaitant continuer les études post-bac j'ai prit la décision 
+        de changer d'orientation et me diriger vers le vaste domaine informatique. Actuellement je suis en 3ème année du BUT Métiers du Multimédia et de l’Internet (MMI) spécialité développement web et dispositif intéractif à L'IUT Gustave Eiffel.
+        Plus personnellement suis quelqu'un de sportif, je fais du streetworkout 3 à 5 jours par semaine et j'ai pratiqué le basketball pendant un peu plus de 7 ans.
         </p>
         </div>
       </section>
@@ -150,7 +150,6 @@ export default function Home() {
         <h2 className="text-3xl font-bold mb-6">MA VEILLE</h2>
         <p className="items-center mb-5">La veille est centrée sur la cybersécurité car suite au BUT MMI j'aimerais m'orienter vers ce domaine</p>
         <VeilleCarousel />
-
       </section>
 
       {selectedProject && <ProjectPopup project={selectedProject} onClose={() => setSelectedProject(null)} />}
@@ -161,5 +160,7 @@ export default function Home() {
         </button>
       )}
     </main>
+    )}
+    </>
   );
 }

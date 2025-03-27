@@ -1,4 +1,14 @@
 {
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": ["three"]  // Ajout de "three" pour que TypeScript reconnaisse les types de three.js
+  },
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },

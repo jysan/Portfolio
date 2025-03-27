@@ -5,7 +5,7 @@ import { FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer id="footer-contact" className="bg-black text-white py-12 flex flex-col items-center">
+    <footer id="footer-contact" className="bg-black text-white py-2 flex flex-col items-center">
       
       <div className="w-16 h-16 mb-4">
         <img src={logo} alt="Logo Portfolio" className="w-full h-full object-cover rounded-md" />
