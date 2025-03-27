@@ -148,7 +148,7 @@ export default function Home() {
 
       <section id="veille" className="flex flex-col items-center justify-center min-h-[70vh]">
         <h2 className="text-3xl font-bold mb-6">MA VEILLE</h2>
-        <p className="items-center mb-5">La veille est centrée sur la cybersécurité car suite au BUT MMI j'aimerais m'orienter vers ce domaine</p>
+        <p className="items-center mb-5 text-center">La veille est centrée sur la cybersécurité, plus précisément sur les attaques tendance car suite au BUT MMI j'aimerais m'orienter vers ce domaine. Bien sûr je ne compte pas mettre de côté mes compétences en développement web, design et dispositif intéractif. Simplement agrandir mon panel de compétences afin d'ajouter un nouvelle élément au bagage pluridisciplinaire que ma apporté ma formation</p>
         <VeilleCarousel />
       </section>
 
