@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import hackernews from "../assets/hackernews.png";
-import hafnium from "../assets/hafnium.png";
 import cert from "../assets/Cert-Fr.png";
 import thales from "../assets/thales.png"
 
