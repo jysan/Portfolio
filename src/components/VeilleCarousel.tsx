@@ -3,11 +3,12 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import hackernews from "../assets/hackernews.png";
 import hafnium from "../assets/hafnium.png";
 import cert from "../assets/Cert-Fr.png";
+import thales from "../assets/thales.png"
 
 const veille = [
   { title: "TheHackerNews", image: hackernews},
-  { title: "Cert-FR", image: hafnium},
-  { title: "Hafnium", image: cert },
+  { title: "Cert-FR", image: cert},
+  { title: "Cyber Solutions by Thales", image: thales },
 ];
 
 export default function VeilleCarousel() {
